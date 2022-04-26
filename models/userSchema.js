@@ -1,4 +1,4 @@
-const mongoose  = require("mongoose")
+const mongoose  = require("mongoose");
 
 const userSchema = mongoose.Schema({
 username:{
@@ -14,6 +14,10 @@ email:{
 password:{
 type:String,
 required:true,
+},
+isAdmin:{
+    type:Boolean,
+    default:false
 },
 });
 const User = mongoose.model("User", userSchema);
